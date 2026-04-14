@@ -1,0 +1,13 @@
+# GitHub Pages repo
+.DS_Store
+Thumbs.db
+node_modules/
+*.log
+*.tmp
+*.swp
+.vscode/
+.env
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.idea/
