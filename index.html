@@ -31,13 +31,24 @@
       object-fit: cover;
       display: block;
     }
+
+    /* ЕДИНСТВЕННОЕ ИЗМЕНЕНИЕ */
     .hero-video::after {
       content: '';
       position: absolute;
       inset: 0;
-      background: rgba(216, 185, 154, 0.68);
+      background: linear-gradient(
+        to bottom,
+        #d8b99a 0%,
+        rgba(216,185,154,0.4) 15%,
+        transparent 35%,
+        transparent 65%,
+        rgba(216,185,154,0.4) 85%,
+        #d8b99a 100%
+      );
       pointer-events: none;
     }
+
     .container {
       position: relative;
       z-index: 2;
@@ -135,268 +146,80 @@
   </style>
 </head>
 <body>
+
   <div class="hero-video">
     <video autoplay muted loop playsinline preload="auto">
       <source src="videoplayback.mp4" type="video/mp4">
       Ваш браузер не поддерживает видео.
     </video>
   </div>
+
   <div class="container">
     <header>
       <h1>С днём рождения, моя лучшая подруга!</h1>
       <p>Это сайт для тебя: с самыми смешными фото, милыми подписьми и тёплым напоминанием о том, как я тебя люблю.</p>
     </header>
+
     <div class="gallery">
       <div class="card">
-        <img src="фото/5400233471743041165.jpg" alt="Смешная фотография подруги 1">
+        <img src="фото/5400233471743041165.jpg">
         <div class="caption">
           <h2>Вечный мем</h2>
           <p>Твоя мимика, когда я еще говорю одну и ту же шутку в третий раз.</p>
         </div>
       </div>
+
       <div class="card">
-        <img src="фото/5400233471743041166.jpg" alt="Смешная фотография подруги 2">
+        <img src="фото/5400233471743041166.jpg">
         <div class="caption">
           <h2>Косплей на настроение</h2>
           <p>Когда хочешь выглядеть серьезно, но внутри думаешь про бутерброд.</p>
         </div>
       </div>
+
       <div class="card">
-        <img src="фото/5400233471743041167.jpg" alt="Смешная фотография подруги 3">
+        <img src="фото/5400233471743041167.jpg">
         <div class="caption">
           <h2>Экспресс-реакция</h2>
           <p>Лицо, которое ты делаешь, когда слышишь слово «домашка».</p>
         </div>
       </div>
+
       <div class="card">
-        <img src="фото/5400233471743041168.jpg" alt="Смешная фотография подруги 4">
+        <img src="фото/5400233471743041168.jpg">
         <div class="caption">
           <h2>Танец счастья</h2>
           <p>Твои глаза, когда узнала, что мы наконец-то идем в кино.</p>
         </div>
       </div>
+
       <div class="card">
-        <img src="фото/5400233471743041169.jpg" alt="Смешная фотография подруги 5">
+        <img src="фото/5400233471743041169.jpg">
         <div class="caption">
           <h2>Праздничная моська</h2>
           <p>Уровень драмы в этом фото превышает уровень сахара в моем чае.</p>
         </div>
       </div>
+
       <div class="card">
-        <img src="фото/5400233471743041170.jpg" alt="Смешная фотография подруги 6">
+        <img src="фото/5400233471743041170.jpg">
         <div class="caption">
           <h2>Наша фирменная шутка</h2>
           <p>Когда на торт хватило, а на 100 долларов — только распечатать.</p>
         </div>
       </div>
     </div>
+
     <section class="final-text">
-      <h2>Трогательное напоминание</h2>
-      <p>блин ты реально не просто подруга а человек-праздник. спасибо тебе за то что ты такая искренняя и всегда меня поддерживаешь, особенно когда я ною. и за то что можешь рассмешить, даже когда всё плохо, ты просто лучшая</p>
-      <p>хочу чтоб ты знала что я тебя обожаю всей душой. ты реально особенная и я пиздец как горжусь тем, сколько всего мы вместе прошли и сколько хуйни натворили</p>
-      <p>даже несмотря на то что ты у нас жесткий гуманитарий и не можешь посчитать сдачу в магазе или сколько минут осталось до конца серии уебаллов, я тебя всё равно люблю. надеюсь твой день рождения будет таким же ярким как твоя улыбка и таким же теплым как наши разговоры по вечерам(когда смотрим уебалов))</p>
-    </section>
-    <div class="footer">P.S. Если хочешь, могу еще добавить другие смешные фото или поменять подписи.</div>
-  </div>
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>С днём рождения, моя лучшая подруга!</title>
-  <style>
-    * {
-      box-sizing: border-box;
-    }
-    body {
-      margin: 0;
-      font-family: 'Arial', sans-serif;
-      min-height: 100vh;
-      background: #d8b99a;
-      color: #312537;
-      overflow-x: hidden;
-    }
-    .hero-video {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
-      z-index: 0;
-      overflow: hidden;
-    }
-    .hero-video video {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
-    .hero-video::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: rgba(216, 185, 154, 0.68);
-      pointer-events: none;
-    }
-    .container {
-      position: relative;
-      z-index: 2;
-      padding: 24px;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-    header {
-      text-align: center;
-      padding: 50px 20px 20px;
-    }
-    header h1 {
-      margin: 0;
-      font-size: clamp(2.6rem, 4vw, 3.8rem);
-      color: #5d3a34;
-      letter-spacing: 0.03em;
-    }
-    header p {
-      margin: 16px auto 0;
-      max-width: 760px;
-      font-size: 1.1rem;
-      color: #4a2f41;
-      line-height: 1.6;
-    }
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 24px;
-      margin-top: 34px;
-    }
-    .card {
-      background: rgba(255,255,255,0.95);
-      border: 1px solid rgba(150, 100, 80, 0.16);
-      border-radius: 30px;
-      box-shadow: 0 20px 48px rgba(83, 54, 43, 0.12);
-      overflow: hidden;
-      transition: transform 0.25s ease, box-shadow 0.25s ease;
-      position: relative;
-    }
-    .card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 24px 52px rgba(83, 54, 43, 0.18);
-    }
-    .card img {
-      width: auto;
-      max-width: 100%;
-      height: 650px;
-      display: block;
-      object-fit: cover;
-    }
-    .card .caption {
-      padding: 18px 22px 24px;
-    }
-    .card .caption h2 {
-      margin: 0 0 10px;
-      font-size: 1.18rem;
-      color: #7a3f37;
-    }
-    .card .caption p {
-      margin: 0;
-      font-size: 1rem;
-      line-height: 1.6;
-      color: #5a3a50;
-    }
-    .final-text {
-      margin-top: 42px;
-      background: rgba(255,245,239,0.94);
-      border: 1px solid rgba(150, 100, 80, 0.18);
-      border-radius: 28px;
-      padding: 34px 30px;
-      position: relative;
-    }
-    .final-text h2 {
-      margin-top: 0;
-      color: #6a3f34;
-      font-size: 2.1rem;
-    }
-    .final-text p {
-      margin: 18px 0 0;
-      font-size: 1.05rem;
-      line-height: 1.8;
-      color: #4b333f;
-    }
-    .footer {
-      margin-top: 24px;
-      text-align: center;
-      font-size: 0.95rem;
-      color: #7a4e55;
-    }
-    @media (max-width: 720px) {
-      .card img {
-        height: 520px;
-      }
-    }
-  </style>
-</head>
-<body>
-  <div class="hero-video">
-    <video autoplay muted loop playsinline preload="auto">
-      <source src="videoplayback.mp4" type="video/mp4">
-      Ваш браузер не поддерживает видео.
-    </video>
-  </div>
-  <div class="container">
-    <header>
-      <h1>С днём рождения, моя лучшая подруга!</h1>
-      <p>Это сайт для тебя: с самыми смешными фото, милыми подписьми и тёплым напоминанием о том, как я тебя люблю.</p>
-    </header>
-    <div class="gallery">
-      <div class="card">
-        <img src="фото/5400233471743041165.jpg" alt="Смешная фотография подруги 1">
-        <div class="caption">
-          <h2>Вечный мем</h2>
-          <p>Твоя мимика, когда я еще говорю одну и ту же шутку в третий раз.</p>
-        </div>
-      </div>
-      <div class="card">
-        <img src="фото/5400233471743041166.jpg" alt="Смешная фотография подруги 2">
-        <div class="caption">
-          <h2>Косплей на настроение</h2>
-          <p>Когда хочешь выглядеть серьезно, но внутри думаешь про бутерброд.</p>
-        </div>
-      </div>
-      <div class="card">
-        <img src="фото/5400233471743041167.jpg" alt="Смешная фотография подруги 3">
-        <div class="caption">
-          <h2>Экспресс-реакция</h2>
-          <p>Лицо, которое ты делаешь, когда слышишь слово «домашка».</p>
-        </div>
-      </div>
-      <div class="card">
-        <img src="фото/5400233471743041168.jpg" alt="Смешная фотография подруги 4">
-        <div class="caption">
-          <h2>Танец счастья</h2>
-          <p>Твои глаза, когда узнала, что мы наконец-то идем в кино.</p>
-        </div>
-      </div>
-      <div class="card">
-        <img src="фото/5400233471743041169.jpg" alt="Смешная фотография подруги 5">
-        <div class="caption">
-          <h2>Праздничная моська</h2>
-          <p>Уровень драмы в этом фото превышает уровень сахара в моем чае.</p>
-        </div>
-      </div>
-      <div class="card">
-        <img src="фото/5400233471743041170.jpg" alt="Смешная фотография подруги 6">
-        <div class="caption">
-          <h2>Наша фирменная шутка</h2>
-          <p>Когда на торт хватило, а на 100 долларов — только распечатать.</p>
-        </div>
-      </div>
-    </div>
-    <section class="final-text">
-      <h2>Трогательное напоминание</h2>
-      <p>блин ты реально не просто подруга а человек-праздник. спасибо тебе за то что ты такая искренняя и всегда меня поддерживаешь, особенно когда я ною. и за то что можешь рассмешить, даже когда всё плохо, ты просто лучшая</p>
-      <p>хочу чтоб ты знала что я тебя обожаю всей душой. ты реально особенная и я пиздец как горжусь тем, сколько всего мы вместе прошли и сколько хуйни натворили</p>
-      <p>даже несмотря на то что ты у нас жесткий гуманитарий и не можешь посчитать сдачу в магазе или сколько минут осталось до конца серии уебаллов, я тебя всё равно люблю. надеюсь твой день рождения будет таким же ярким как твоя улыбка и таким же теплым как наши разговоры по вечерам(когда смотрим уебалов))</p>
-   
+  <h2>Трогательное напоминание</h2>
+
+  <p>блин ты реально не просто подруга а человек-праздник. спасибо тебе за то что ты такая искренняя и всегда меня поддерживаешь, особенно когда я ною. и за то что можешь рассмешить, даже когда всё плохо, ты просто лучшая</p>
+
+  <p>хочу чтоб ты знала что я тебя обожаю всей душой. ты реально особенная и я пиздец как горжусь тем, сколько всего мы вместе прошли и сколько хуйни натворили</p>
+
+  <p>даже несмотря на то что ты у нас жесткий гуманитарий и не можешь посчитать сдачу в магазе или сколько минут осталось до конца серии уебаллов, я тебя всё равно люблю. надеюсь твой день рождения будет таким же ярким как твоя улыбка и таким же теплым как наши разговоры по вечерам(когда смотрим уебалов))</p>
+
+</section>
+
 </body>
 </html>
